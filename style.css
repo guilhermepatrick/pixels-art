@@ -1,20 +1,41 @@
+@font-face {
+    font-family: Overbyte Off Regular;
+    src: url(fonts/ccoverbyteoffregular.otf);
+}
+
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Overbyte Off Regular';
 }
 
 #conteudoGeral {
-    background-color: cadetblue;
-    width: 800px;
-    height: 500px;
+    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
+    width: fit-content;
+    height: fit-content;
+    padding: 20px;
+    padding-top: 10px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
+    align-items: center;
+}
+
+#cor-selecionada li,
+h2 {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px auto auto auto;
+    display: block;
+}
+
+#cor-selecionada li {
+    margin-top: 10px;
 }
 
 h1 {
     text-align: center;
-
+    font-size: 48px;
 }
+
 
 #color-palette {
     display: flex;
@@ -52,9 +73,12 @@ li {
 #pixel-board {
     display: table;
     margin: 20px auto auto auto;
-
 }
 
+#pixel-board li:hover {
+    background-color: rgba(211, 211, 211, 0.973);
+    
+}
 .linha-pixel-board {
     display: table-row;
 }
