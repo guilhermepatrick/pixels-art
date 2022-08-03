@@ -14,12 +14,12 @@ body {
     padding: 20px;
     padding-top: 10px;
     border-radius: 10px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto auto auto;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.315) 5px 5px 5px;
 }
 
-#cor-selecionada li,
+#cor-selecionada ,
 h2 {
     font-size: 30px;
     text-align: center;
@@ -27,15 +27,22 @@ h2 {
     display: block;
 }
 
-#cor-selecionada li {
-    margin-top: 10px;
+#cor-selecionada div {    
+    display: block;
+    margin: 10px auto auto auto;
 }
 
 h1 {
     text-align: center;
     font-size: 48px;
 }
-
+.pixel {
+    background-color: white;
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
 
 #color-palette {
     display: flex;
@@ -61,24 +68,13 @@ h1 {
     background-color: black;
 }
 
-li {
-    background-color: white;
-    display: table-cell;
-    list-style: none;
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
-}
 
 #pixel-board {
     display: table;
     margin: 20px auto auto auto;
 }
 
-#pixel-board li:hover {
+#pixel-board div:hover {
     background-color: rgba(211, 211, 211, 0.973);
     
-}
-.linha-pixel-board {
-    display: table-row;
 }
