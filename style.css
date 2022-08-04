@@ -2,7 +2,8 @@
     font-family: Overbyte Off Regular;
     src: url(fonts/ccoverbyteoffregular.otf);
 }
-body {    
+
+body {
     font-family: 'Overbyte Off Regular';
 }
 
@@ -26,6 +27,9 @@ body {
 #cor-selecionada li {
     margin: auto;
     display: block;
+}
+#selected-color{
+    background-color: black;
 }
 
 h1 {
@@ -84,4 +88,7 @@ li {
 #pixel-board li:hover {
     background-color: rgba(211, 211, 211, 0.973);
 
+}
+#color-palette li:hover{        
+    box-shadow:  0 0 2em rgb(202, 196, 196);
 }
