@@ -1,6 +1,6 @@
 window.onload()
 {
-    let selecionaCor= document.querySelector('preto')[0];
-    let corSelecionada= document.querySelector('color-selected')[0];
+    let selecionaCor= document.querySelector('preto');
+    let corSelecionada= document.querySelector('color-selected');
     console.log(selecionaCor)
 }

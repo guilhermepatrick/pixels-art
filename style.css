@@ -42,9 +42,10 @@ h1 {
     height: 40px;
     border: 1px solid black;
 }
+
 #pixel-board div{
     background-color: white;
-}
+   }
 
 #color-palette {
     display: flex;
