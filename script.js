@@ -10,8 +10,14 @@ for (let i = 0; i <= cores.length - 1; i += 1) {
 for (let i = 0; i <= pixelsQuadro.length - 1; i += 1) {    
     pixelsQuadro[i].addEventListener('click', colorirPixel)    
 }
-function selecionaCor() {   
+function selecionaCor() {
+    
     corSelecionada.id = event.target.id
+    for(let i = 0; i <= cores.length -1; i++){
+        console.log('fez o loop')
+        cores[i].classList.remove('selected')
+    }
+    event.target.classList.add('selected')
     console.log('Selecionou a cor')
 }
 
