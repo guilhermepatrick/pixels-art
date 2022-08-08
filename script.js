@@ -4,7 +4,8 @@ let botaoLimpar = document.getElementById('clear-board');
 let tamanhoQuadro = document.getElementById('board-size');
 let criaQuadro = document.getElementById('generate-board');
 let quadroPixel = document.getElementById('pixel-board'); // elemento pai para receber os filhos
-criaBoard()
+
+adicionaColorir()
 // ADICIONANDO EVENT LISTENER EM TODAS AS CORES
 for (let i = 0; i <= cores.length - 1; i += 1) {
     cores[i].addEventListener('click', selecionaCor);
@@ -30,22 +31,22 @@ function limpaQuadro() {
     for (let i = 0; i <= pixelsQuadro.length - 1; i += 1) {
         pixelsQuadro[i].id = 'branco'
     }
-    for (let i = 0; i <= pixelsQuadro.length - 1; i += 1) {
-        let pixelsQuadro = document.querySelectorAll('#pixel-board .pixel');
-        pixelsQuadro[i].addEventListener('click', colorirPixel)
-    }
+    adicionaColorir()
+}
+function pegaValores() {
+
 }
 function criaBoard() {
     let pixelsQuadro = document.querySelectorAll('#pixel-board .pixel');
     quadroPixel.innerHTML = '';
     let tamanho = tamanhoQuadro.value;
     if (tamanho === '') {
-        window.alert('Board inválido!')
+        alert('Board inválido!')
     }
-    if(tamanho < 5){
+    if (tamanho < 5) {
         tamanho = 5;
     }
-    if(tamanho > 50){
+    if (tamanho > 50) {
         tamanho = 50;
     }
     for (let i = 0; i < tamanho; i += 1) {
@@ -59,8 +60,11 @@ function criaBoard() {
             pixel.classList = 'pixel'
         }
     }
+    adicionaColorir()
+}
+function adicionaColorir() {
+    let pixelsQuadro = document.querySelectorAll('#pixel-board .pixel');
     for (let i = 0; i <= pixelsQuadro.length - 1; i += 1) {
-        let pixelsQuadro = document.querySelectorAll('#pixel-board .pixel');
         pixelsQuadro[i].addEventListener('click', colorirPixel)
     }
 }

@@ -6,7 +6,6 @@
 body {
     font-family: 'Overbyte Off Regular';
 }
-
 #conteudoGeral {
     background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
     width: fit-content;
@@ -17,13 +16,11 @@ body {
     margin: auto;
     align-items: center;
 }
-
 #cor-selecionada {
     font-size: 30px;
     text-align: center;
     display: block;
 }
-
 #cor-selecionada li {
     margin: auto;
     display: block;
@@ -31,18 +28,15 @@ body {
 #selected-color{
     background-color: black;
 }
-
 h1 {
     text-align: center;
     font-size: 48px;
     margin: 10px;
 }
-
 h2 {
     margin: 10px;
     font-size: 36px;
 }
-
 #color-palette {
     display: flex;
     justify-content: space-between;
@@ -50,29 +44,22 @@ h2 {
     margin-left: auto;
     margin-right: auto;
 }
-
 #ciano {
     background-color: cyan;
 }
-
 #magenta {
     background-color: magenta;
 }
-
 #amarelo {
     background-color: yellow;
 }
-
 #preto {
     background-color: black;
-}
-#branco {
+}#branco {
     background-color: white;
-}
-#botoes{
+}#botoes{
     margin-top: 10px;
-}
-#botoes button{
+}#botoes button{
     border-radius: 5px;
     text-align: center;
     font-size: 20px;
@@ -95,7 +82,6 @@ li {
     height: 40px;
     border: 1px solid black;
 }
-
 #pixel-board {
     display: table;
     margin: 10px auto 10px auto;
@@ -104,7 +90,6 @@ li {
 .linha-pixel-board {
     display: table-row;
 }
-
 #pixel-board li:hover {
     background-color: rgba(211, 211, 211, 0.973);
 
