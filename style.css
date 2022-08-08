@@ -69,6 +69,24 @@ h2 {
 #branco {
     background-color: white;
 }
+#botoes{
+    margin-top: 10px;
+}
+#botoes button{
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Overbyte Off Regular';
+    width: 80px;
+    padding: 10px;
+}
+#botoes input{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Overbyte Off Regular';
+}
 li {
     background-color: white;
     display: table-cell;

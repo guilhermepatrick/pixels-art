@@ -22,7 +22,11 @@
         <div id="cor-selecionada">
             <h2>Cor Selecionada</h2>
             <li id="selected-color"></li>
-            <button id="clear-board">Limpar</button>
+            <div id="botoes">
+                <button id="clear-board">Limpar</button>
+                <input id="board-size" placeholder="Tamanho do Quadro" type="number" min="1" value="5">
+                <button id="generate-board">VQV</button>
+            </div>
         </div>
         <div id="pixel-board">
             <div class="linha-pixel-board">
@@ -60,9 +64,8 @@
                 <li class="pixel"></li>
                 <li class="pixel"></li>
             </div>
+            <!--FIM DO PIXEL BOARD-->
         </div>
-        <!--FIM DO PIXEL BOARD-->
-    </div>
 </body>
 <script src="script.js"></script>
 
