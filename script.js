@@ -1,11 +1,14 @@
-let cores = document.getElementsByClassName('color');
-let corSelecionada = document.getElementById('selected-color');
-let botaoLimpar = document.getElementById('clear-board');
-let tamanhoQuadro = document.getElementById('board-size');
-let criaQuadro = document.getElementById('generate-board');
-let quadroPixel = document.getElementById('pixel-board'); // elemento pai para receber os filhos
+const cores = document.getElementsByClassName('color');
+const corSelecionada = document.getElementById('selected-color');
+const botaoLimpar = document.getElementById('clear-board');
+const tamanhoQuadro = document.getElementById('board-size');
+const criaQuadro = document.getElementById('generate-board');
+const quadroPixel = document.getElementById('pixel-board');
 
+geraRbg()
 adicionaColorir()
+
+
 // ADICIONANDO EVENT LISTENER EM TODAS AS CORES
 for (let i = 0; i <= cores.length - 1; i += 1) {
     cores[i].addEventListener('click', selecionaCor);
@@ -16,28 +19,25 @@ botaoLimpar.addEventListener('click', limpaQuadro)
 criaQuadro.addEventListener('click', criaBoard)
 
 function selecionaCor() {
-    corSelecionada.id = event.target.id
-    for (let i = 0; i <= cores.length - 1; i++) {
+    corSelecionada.style.backgroundColor = event.target.style.backgroundColor
+        for (let i = 0; i <= cores.length - 1; i++) {
         cores[i].classList.remove('selected')
     }
     event.target.classList.add('selected')
 }
 function colorirPixel() {
-    event.target.id = corSelecionada.id;
-    console.log('colore pixel')
+    event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
 }
 function limpaQuadro() {
     let pixelsQuadro = document.querySelectorAll('#pixel-board .pixel');
-    for (let i = 0; i <= pixelsQuadro.length - 1; i += 1) {
-        pixelsQuadro[i].id = 'branco'
+    for (let i = 0; i <= pixelsQuadro.length - 1; i += 1) {        
+        pixelsQuadro[i].style.backgroundColor = 'white';
     }
     adicionaColorir()
 }
-function pegaValores() {
 
-}
 function criaBoard() {
-    let pixelsQuadro = document.querySelectorAll('#pixel-board .pixel');
+    
     quadroPixel.innerHTML = '';
     let tamanho = tamanhoQuadro.value;
     if (tamanho === '') {
@@ -66,5 +66,19 @@ function adicionaColorir() {
     let pixelsQuadro = document.querySelectorAll('#pixel-board .pixel');
     for (let i = 0; i <= pixelsQuadro.length - 1; i += 1) {
         pixelsQuadro[i].addEventListener('click', colorirPixel)
+    }
+}
+function geraRbg() {
+    cores[0].style.backgroundColor = 'black'
+    corSelecionada.style.backgroundColor = 'black';
+    let min = Math.ceil(0);
+    let max = Math.floor(255);
+    for (let i = 1; i <= 3; i += 1) {
+        let r = (Math.floor(Math.random() * (max - min) + min));
+        let g = (Math.floor(Math.random() * (max - min) + min));
+        let b = (Math.floor(Math.random() * (max - min) + min));
+        let rgb = `rgb(${r},${g},${b})`;
+        cores[i].style.backgroundColor = rgb;
+        console.log(rgb)
     }
 }
